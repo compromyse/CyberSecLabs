@@ -1,0 +1,76 @@
+# Nmap 7.80 scan initiated Sat Aug 20 14:30:15 2022 as: nmap -vvv -p 22,80,443 -sC -sV -Pn -oN nmap 172.31.3.1
+Nmap scan report for office.csl (172.31.3.1)
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-08-20 14:30:15 IST for 26s
+
+PORT    STATE SERVICE  REASON  VERSION
+22/tcp  open  ssh      syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e2:3f:6c:4e:6d:8b:dc:59:b7:cb:66:64:27:f9:22:86 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+gFggQqxPisakN8dYc6fbiOED+I+HD7Le9lgYUcrpjdKozChagwV9s3ZKTGkgmkOpMVz9Ifhv3LnoXcNACuKDWU7d6HCX0Ab+cJMwGX/D68AZBNlaFNyrJgUg52omwRs0aktor1TSxkjugyTaXY5LG1fl9/ZNm7OJaX3T8CCADnqDtsKAXPOEku90jUcnf1fkTr/rW2gkQbmfh/QwRO2jPHDtfdnObmwCslGdWDi1pg8IcMsw86enF5sZOjzAqJADbmY9H7gg77nPZCH9GMh5wv4Cb/y/c3o923EJ4h1MimpGj60aa2S1UKmjKs/e7pzoHGZYbadapvwne/94S2Xl
+|   256 ee:be:37:f3:75:4e:38:2a:a9:99:e0:18:1a:b8:d1:41 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPmYME2CvT8Wufq97CVcM38cok+baDhxKCQ7dkt2/5uvS/ILT++6C/0CFsmj1/oZv9JWBDu4uVnnaxLdn1o7mKY=
+|   256 7f:72:a7:29:be:30:9e:5e:aa:b9:fc:be:09:d2:8b:3a (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPlt+7kyv4MWbk8UhliuRGa5/T+3QiGgzj9XgWcHb+AQ
+80/tcp  open  http     syn-ack Apache httpd 2.4.29 ((Ubuntu))
+|_http-generator: WordPress 5.4.1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Dunder Mifflin &#8211; Just another WordPress site
+443/tcp open  ssl/http syn-ack Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+| ssl-cert: Subject: commonName=office.csl/organizationName=Dunder Mifflin/stateOrProvinceName=PA/countryName=US/localityName=Scranton/emailAddress=dwight@office.csl
+| Issuer: commonName=office.csl/organizationName=Dunder Mifflin/stateOrProvinceName=PA/countryName=US/localityName=Scranton/emailAddress=dwight@office.csl
+| Public Key type: rsa
+| Public Key bits: 4096
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-05-08T20:01:51
+| Not valid after:  2021-05-08T20:01:51
+| MD5:   e159 faf3 e637 25ad 7d95 3210 9a69 bce6
+| SHA-1: adee e6e5 1566 a86f c8d9 6d7e 1fc0 2239 e21e 92ef
+| -----BEGIN CERTIFICATE-----
+| MIIF2zCCA8OgAwIBAgIUclv5tp1a/+9jd8c5WFlk2dNYSzwwDQYJKoZIhvcNAQEL
+| BQAwfTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAlBBMREwDwYDVQQHDAhTY3JhbnRv
+| bjEXMBUGA1UECgwORHVuZGVyIE1pZmZsaW4xEzARBgNVBAMMCm9mZmljZS5jc2wx
+| IDAeBgkqhkiG9w0BCQEWEWR3aWdodEBvZmZpY2UuY3NsMB4XDTIwMDUwODIwMDE1
+| MVoXDTIxMDUwODIwMDE1MVowfTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAlBBMREw
+| DwYDVQQHDAhTY3JhbnRvbjEXMBUGA1UECgwORHVuZGVyIE1pZmZsaW4xEzARBgNV
+| BAMMCm9mZmljZS5jc2wxIDAeBgkqhkiG9w0BCQEWEWR3aWdodEBvZmZpY2UuY3Ns
+| MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyzFMJrdDgahPUQwFRU5i
+| /m0PcvBBIY2BvfxBrb6aQ8WHpj5rcKBFZbBuLK5sPWazz+Tc4jhjqOQ14/x9NTZx
+| L0/1Oyq57psmoVbMKEtFOUC5uBv0Akp6fOZEDf4IZ5CpyO04OAVKqts4T/0Rxjem
+| dwcuLtP4W95Q8Qt0SJn4ITlb8a3ehBhON5BvTBEL048mAzY0ZTFtNa3cCVJyGQZT
+| uXI/qqwhrUKDD8Z5VdHrNBjawF+2e5KB+fPoaz7+KlgBMLdMhB6tDM/Ge4FP4XcH
+| vshqy6PUW2cEIlKp0Rexy45VL6mNM3bdpHU/mEjA4G0Km88uw0Ckzi46X3+3gWl2
+| j3347PbXBwos/AFR848o5o+w6MZk7GW3nSFZCN714PTdyxVebJhdORG952Npe5x1
+| FGuIoTu5w+dW2GOo4/puU6eDfomq94/cF/AYXXvRJlFAJDgTMDWqIaazQ1sEbc/s
+| X+rSeHON0Q9eiq8DJPi7Vb+5K59QW2Ivyo+GiRqbL7T3zIqLgfwU1w3g6V/yEoJW
+| N1LBCW4vktelDmujHNQpeqVbgIkxi6hrEBy+uSlc/ItJOZ80SX26Gb1k1yDAs2up
+| yCNbrb0/wOgOooIU+t7SL5gEBscfuhY6apb+KffL8+pfj+MnRARRS+o8AHR6CSkL
+| 7MjkR4E8pk09AszIFsbqUacCAwEAAaNTMFEwHQYDVR0OBBYEFP4XwrmZnpFSInDH
+| /riI853iqOMFMB8GA1UdIwQYMBaAFP4XwrmZnpFSInDH/riI853iqOMFMA8GA1Ud
+| EwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggIBAD8fOtMsIsVtzesL0lMH8aQu
+| innrVX4PG4biu3yH1JmwRpJ8wWLycrxh/rWQQJhKLGYyFQOzBcEw39ptSdQrmyVB
+| harz7BqJ1VY1sDmLUg76bsCeTjmiaP7lw1UvMWgTBVpMyLMFEtuEAfbKZFsJzCiD
+| i38EX9sTkjqn3ZcEpfKK4xitlPLxNrL1pshJhg4mBhbiKzzCsSEb1uvjefEm6PAe
+| OewZ5jORiQLW2dUirCYxxYOjISVB38qXsgprrjhzvE2F4qLKQzt45eN9IoyI+8+l
+| Ta6pdXYczkRvy4UlwZeVWopTEwpoRGwNIPAU/cFPEqs7zRBCZAGW12TWQkQ8MC75
+| J5FlSR4lv40EmuqGEalcDXnGdJXxLtDcauTygMnLCrp5wWfHGakkRIHJDUiLw2VO
+| VJYxayTxp0r3Rk/2M6kHf12frhkzqv24eP/moLj73yBqJOanp2akQhRUe40ockMl
+| HWzY5Y2ujilPHJn4ndPYgFwGhZIdgBOJ0mQlNLGSuZwL2sXo9CdQcJFvEz/C3Y5X
+| +fNjCb9ZFQXl0Ybmi8zlM1wF0oncc3AcodPTi3VTbfvwvbQ+Wav6Lah4v1fyCdvl
+| 9zAEyYXMnQdNuVVEB+BKVxgVRr/bplf2H1cquvgxUY+LstNh8rKbBn4guWp5yJ7m
+| ClSGew5a8zXLdnOZ6F5z
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 20 14:30:41 2022 -- 1 IP address (1 host up) scanned in 25.61 seconds
